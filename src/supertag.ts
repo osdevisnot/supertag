@@ -79,9 +79,10 @@ abstract class Component extends HTMLElement {
     return this.__root__.querySelectorAll(selector)
   }
   /**
-   * Asynchronously flush render cache to DOM. Once rendered, we use
-   * the existing vDOM to diff against the new vDOM instead of rendering
-   * the whole view again...
+   * Asynchronously flush render cache to DOM using microtasks.
+   * See: https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/
+   * Once rendered, we use the existing vDOM to diff against the new vDOM
+   * ... instead of rendering the whole view again.
    */
   private async __flush__() {
     ;(this as any)[NEEDS_RENDER] = true

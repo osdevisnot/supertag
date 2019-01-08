@@ -7,7 +7,6 @@ export default [
   {
     input: 'src/supertag.ts',
     output: { file: 'dist/supertag.mjs', format: 'es' },
-    // external: ['superfine'],
     plugins: [typescript({ tsconfigOverride: { compilerOptions: { target: 'es2018' } } }), resolve()]
   },
   {

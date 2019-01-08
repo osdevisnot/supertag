@@ -8,13 +8,33 @@ Supertag is a light weight library to create self contained, reusable **Web Comp
 
 ## Features
 
-- **Standards Based** - `Supertag` uses latest features of web platform such as [Custom Elements](https://developers.google.com/web/fundamentals/web-components/customelements) and [Shadow DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom) and combines them with fast and efficient vDOM rendering library [Superfine](https://github.com/jorgebucaran/superfine)
+- **Standards Based:** `Supertag` uses latest features of web platform such as [Custom Elements](https://developers.google.com/web/fundamentals/web-components/customelements) and [Shadow DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom) and combines them with [Superfine](https://github.com/jorgebucaran/superfine) - a fast and efficient vDOM rendering library.
 
-- **Lightweight** - extremely light weight solution (**< 2 kb minified and gzipped**) for creating self contained, reusable **Web Components**
+- **Lightweight: < 2 kb min & gzipped** - extremely light weight solution for creating self contained, reusable **Web Components**
+
+- **Fast** - `Supertag` enables async rendering at next [micro-task timing](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/). Multiple calls to render are automatically batched for fast view updates.
 
 ## Installation
 
-[Docs TODO]
+Grab a copy from [unpkg](https://unpkg.com/supertag) CDN:
+
+```html
+<script src="https://unpkg.com/supertag"></script>
+```
+
+Need that in ESM format?
+
+```html
+<script src="https://unpkg.com/supertag?module"></script>
+```
+
+Or install it from NPM:
+
+```bash
+npm i supertag
+```
+
+and use it with module bundlers like `webpack` or `parcel` as you normally would.
 
 ## Usage
 
