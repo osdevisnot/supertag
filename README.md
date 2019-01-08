@@ -38,7 +38,32 @@ and use it with module bundlers like `webpack` or `parcel` as you normally would
 
 ## Usage
 
-[Docs TODO]
+Our first example is a component that can increment and decrement a counter
+
+```js
+import { Component, h } from 'supertag'
+
+class HelloCounter extends Component {
+  get count() {
+    return this.getAttribute('count')
+  }
+  set count(value) {
+    this.setAttribute('count', value)
+  }
+  static get observedAttributes() {
+    return ['count']
+  }
+  render() {
+    return h('div', {}, [
+      h('h1', {}, this.count),
+      h('button', { onclick: () => this.count-- }, '-'),
+      h('button', { onclick: () => this.count++ }, '+')
+    ])
+  }
+}
+
+customElements.define('hello-counter', HelloCounter)
+```
 
 ## License
 

@@ -12,6 +12,8 @@
   "module": "dist/supertag.mjs",
   "typings": "dist/supertag.d.ts",
   "scripts": {
+    "prestart": "yarn run build",
+    "start": "live-server",
     "prebuild": "rm -rf dist",
     "build": "rollup -c",
     "postbuild": "yarn run test",
@@ -32,6 +34,7 @@
     "superfine": "^6.0.1"
   },
   "devDependencies": {
+    "live-server": "^1.2.1",
     "rollup": "^1.0.2",
     "rollup-plugin-filesize": "^6.0.0",
     "rollup-plugin-node-resolve": "^4.0.0",
