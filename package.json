@@ -1,6 +1,6 @@
 {
   "name": "supertag",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Supertag is a light weight library to create self contained, reusable Web Components",
   "repository": "osdevisnot/supertag",
   "license": "MIT",
