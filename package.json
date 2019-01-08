@@ -1,0 +1,39 @@
+{
+  "name": "supertag",
+  "version": "0.0.0",
+  "description": "Supertag is a light weight library to create self contained, reusable Web Components",
+  "repository": "osdevisnot/supertag",
+  "license": "MIT",
+  "author": "osdevisnot <osdevisnot@gmail.com>",
+  "main": "dist/supertag.js",
+  "module": "dist/supertag.mjs",
+  "typings": "dist/supertag.d.ts",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "rollup -c",
+    "postbuild": "yarn run test",
+    "prepub": "yarn run setup",
+    "pub": "yarn version --patch",
+    "postpub": "yarn publish",
+    "presetup": "git clean -fdX",
+    "setup": "yarn",
+    "postsetup": "yarn run build",
+    "test": "echo 'Not Implmeneted Yet'"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "superfine": "^6.0.1"
+  },
+  "devDependencies": {
+    "rollup": "^1.0.2",
+    "rollup-plugin-filesize": "^6.0.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-terser": "^4.0.1",
+    "rollup-plugin-typescript2": "^0.18.1",
+    "typescript": "^3.2.2"
+  }
+}
