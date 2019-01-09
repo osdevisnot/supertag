@@ -6,6 +6,11 @@
 
 Supertag is a light weight library to create self contained, reusable **Web Components**.
 
+[![The GZIP size of Supertag](http://img.badgesize.io/https://unpkg.com/supertag?compression=gzip&label=GZIP%20Size)](https://unpkg.com/supertag)
+[![The Brotli size of Supertag](http://img.badgesize.io/https://unpkg.com/supertag?compression=brotli&label=Brotli%20Size)](https://unpkg.com/supertag)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 ## Features
 
 - **Standards Based:** `Supertag` uses latest features of web platform such as [Custom Elements](https://developers.google.com/web/fundamentals/web-components/customelements) and [Shadow DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom) and combines them with [Superfine](https://github.com/jorgebucaran/superfine) - a fast and efficient vDOM rendering library.
