@@ -45,24 +45,25 @@ import { Component, h } from 'supertag'
 
 class HelloCounter extends Component {
   get count() {
-    return this.getAttribute('count')
+    return Number(this.getAttribute('count') || 0)
   }
   set count(value) {
-    this.setAttribute('count', value)
+    this.setAttribute('count', String(value))
   }
   static get observedAttributes() {
     return ['count']
   }
   render() {
-    return h('div', {}, [
-      h('h1', {}, this.count),
-      h('button', { onclick: () => this.count-- }, '-'),
-      h('button', { onclick: () => this.count++ }, '+')
-    ])
+    return (
+      <div>
+        <h1>{this.count}</h1>
+        <button onclick={() => this.count--}>-</button>
+        <button onclick={() => this.count++}>+</button>
+        <button onclick={() => (this.count = this.count + 10)}>+10</button>
+      </div>
+    )
   }
 }
-
-customElements.define('hello-counter', HelloCounter)
 ```
 
 ## Contributing
@@ -83,7 +84,7 @@ Once setup, review `public` directory, or launch examples locally using `yarn st
 
 **Ready to fix an issue?**
 
-Add your example to demonstrate your use case and [open a pull request](https://github.com/osdevisnot/supertag/pulls) with your changes.
+Add an example in `public` folder to demonstrate your use case and [open a pull request](https://github.com/osdevisnot/supertag/pulls) with your changes.
 
 ## License
 

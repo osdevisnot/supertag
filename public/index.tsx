@@ -9,21 +9,24 @@ class HelloWorld extends Component {
 customElements.define('hello-world', HelloWorld)
 
 class HelloCounter extends Component {
-  get count(): any {
-    return this.getAttribute('count') || 0
+  get count() {
+    return Number(this.getAttribute('count') || 0)
   }
-  set count(value: any) {
-    this.setAttribute('count', value)
+  set count(value) {
+    this.setAttribute('count', String(value))
   }
   static get observedAttributes() {
     return ['count']
   }
   render() {
-    return h('div', {}, [
-      h('h1', {}, this.count),
-      h('button', { onclick: () => this.count-- }, '-'),
-      h('button', { onclick: () => this.count++ }, '+')
-    ])
+    return (
+      <div>
+        <h1>{this.count}</h1>
+        <button onclick={() => this.count--}>-</button>
+        <button onclick={() => this.count++}>+</button>
+        <button onclick={() => (this.count = this.count + 10)}>+10</button>
+      </div>
+    )
   }
 }
 
