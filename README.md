@@ -65,6 +65,26 @@ class HelloCounter extends Component {
 customElements.define('hello-counter', HelloCounter)
 ```
 
+## Contributing
+
+**Found a problem ?**
+
+[Open an issue](https://github.com/osdevisnot/supertag/issues), or better yet [open a pull request](https://github.com/osdevisnot/supertag/pulls)
+
+**Want to hack code?**
+
+Clone this repo, and run `setup` script within repo root:
+
+```
+yarn run setup
+```
+
+Once setup, review `public` directory, or launch examples locally using `yarn start`
+
+**Ready to fix an issue?**
+
+Add your example to demonstrate your use case and [open a pull request](https://github.com/osdevisnot/supertag/pulls) with your changes.
+
 ## License
 
 Supertag is MIT licensed. See [LICENSE](/LICENSE.md).

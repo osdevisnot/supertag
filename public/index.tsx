@@ -1,10 +1,18 @@
-const { Component, h } = supertag
+import { Component, h } from '../src/supertag'
+
+class HelloWorld extends Component {
+  render() {
+    return <div>Hello World</div>
+  }
+}
+
+customElements.define('hello-world', HelloWorld)
 
 class HelloCounter extends Component {
-  get count() {
-    return this.getAttribute('count')
+  get count(): any {
+    return this.getAttribute('count') || 0
   }
-  set count(value) {
+  set count(value: any) {
     this.setAttribute('count', value)
   }
   static get observedAttributes() {

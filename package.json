@@ -12,17 +12,16 @@
   "module": "dist/supertag.mjs",
   "typings": "dist/supertag.d.ts",
   "scripts": {
-    "prestart": "yarn run build",
-    "start": "live-server",
-    "prebuild": "rm -rf dist",
+    "prebuild": "del dist",
     "build": "rollup -c",
     "postbuild": "yarn run test",
     "prepub": "yarn run setup",
-    "pub": "yarn version --patch",
-    "postpub": "yarn publish --non-interactive && git push --follow-tags",
+    "pub": "yarn publish",
+    "postpub": "git push --follow-tags",
     "presetup": "git clean -fdX",
     "setup": "yarn",
     "postsetup": "yarn run build",
+    "start": "rollup -wc",
     "test": "echo 'Not Implmeneted Yet'"
   },
   "prettier": {
@@ -34,12 +33,7 @@
     "superfine": "^6.0.1"
   },
   "devDependencies": {
-    "live-server": "^1.2.1",
-    "rollup": "^1.0.2",
-    "rollup-plugin-filesize": "^6.0.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-terser": "^4.0.1",
-    "rollup-plugin-typescript2": "^0.18.1",
-    "typescript": "^3.2.2"
+    "del-cli": "^1.1.0",
+    "tslib-cli": "^0.0.28"
   }
 }

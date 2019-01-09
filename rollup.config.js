@@ -1,17 +1,16 @@
-import typescript from 'rollup-plugin-typescript2'
-import resolve from 'rollup-plugin-node-resolve'
-import { terser } from 'rollup-plugin-terser'
-import filesize from 'rollup-plugin-filesize'
+const bundles = require('tslib-cli')
+const isDev = !!process.env.ROLLUP_WATCH
 
-export default [
-  {
-    input: 'src/supertag.ts',
-    output: { file: 'dist/supertag.mjs', format: 'es' },
-    plugins: [typescript({ tsconfigOverride: { compilerOptions: { target: 'es2018' } } }), resolve()]
-  },
-  {
-    input: 'src/supertag.ts',
-    output: { file: 'dist/supertag.js', format: 'umd', name: 'supertag' },
-    plugins: [typescript(), resolve(), terser(), filesize({ showBrotliSize: true })]
-  }
+let config = [
+  { input: 'src/supertag.ts', output: { file: 'dist/supertag.mjs', format: 'es' } },
+  { input: 'src/supertag.ts', output: { file: 'dist/supertag.js', format: 'umd', name: 'supertag' }, minify: true }
 ]
+
+// demo code on `npm start`
+if (!!process.env.ROLLUP_WATCH) {
+  config = [
+    { input: 'public/index.tsx', output: { file: 'dist/index.js', format: 'umd', name: 'example' }, devServer: true }
+  ]
+}
+
+export default config
