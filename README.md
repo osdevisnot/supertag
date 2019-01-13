@@ -13,11 +13,21 @@ Supertag is a light weight library to create self contained, reusable **Web Comp
 
 ## Features
 
-- **Standards Based:** `Supertag` uses latest features of web platform such as [Custom Elements](https://developers.google.com/web/fundamentals/web-components/customelements) and [Shadow DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom) and combines them with [Superfine](https://github.com/jorgebucaran/superfine) - a fast and efficient vDOM rendering library.
+- **Standards Based:** `Supertag` uses latest features of web platform such as [**Custom Elements**](https://developers.google.com/web/fundamentals/web-components/customelements) and [**Shadow DOM**](https://developers.google.com/web/fundamentals/web-components/shadowdom) and combines them with [**Superfine**](https://github.com/jorgebucaran/superfine) - a fast and efficient vDOM rendering library.
 
-- **Lightweight: < 2 kb min & gzipped** - extremely light weight solution for creating self contained, reusable **Web Components**
+- **Lightweight: < 2 kb min & gzipped** - extremely light weight solution for creating self contained, reusable [**Web Components**](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
-- **Fast** - `Supertag` enables async rendering at next [micro-task timing](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/). Multiple calls to render are automatically batched for fast view updates.
+- **Fast** - `Supertag` enables async rendering at next [micro-task timing](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/). Multiple calls to render are automatically batched for blazing fast view updates.
+
+## Motivation
+
+We believe, that the emerging [**Web Components**](https://developer.mozilla.org/en-US/docs/Web/Web_Components) standard has reached a level where **truly reusable component can now become a reality**. Browser support for [**Custom Elements**](https://caniuse.com/#feat=custom-elementsv1) & [**Shadow DOM**](https://caniuse.com/#feat=shadowdomv1) is comprehensive and Framework support for Web Components is at par.
+
+> See fantastic initiative by [Rob Dodson](https://github.com/robdodson) which tracks support for [**Custom Elements Everywhere**](https://custom-elements-everywhere.com/) in many popular frameworks.
+
+However, the ergonomics around vanilla web components are too low level and often inconvenient. This is where `Supertag` plays a role.
+
+Primary focus for `Supertag` is to make **writing and shipping** web components as painless as possible while still staying true to its minimalism promise.
 
 ## Installation
 
