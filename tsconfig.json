@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2018",
     "strict": true,
+    "noImplicitAny": false,
     "outDir": "dist",
     "moduleResolution": "node",
     "module": "es2015",

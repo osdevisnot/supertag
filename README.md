@@ -23,11 +23,11 @@ Supertag is a light weight library to create self contained, reusable **Web Comp
 
 We believe, that the emerging [**Web Components**](https://developer.mozilla.org/en-US/docs/Web/Web_Components) standard has reached a level where **truly reusable component can now become a reality**. Browser support for [**Custom Elements**](https://caniuse.com/#feat=custom-elementsv1) & [**Shadow DOM**](https://caniuse.com/#feat=shadowdomv1) is comprehensive and Framework support for Web Components is at par.
 
-> See fantastic initiative by [Rob Dodson](https://github.com/robdodson) which tracks support for [**Custom Elements Everywhere**](https://custom-elements-everywhere.com/) in many popular frameworks.
+> See [**Custom Elements Everywhere**](https://custom-elements-everywhere.com/) - a fantastic initiative by [Rob Dodson](https://github.com/robdodson) which tracks support for many popular frameworks.
 
 However, the ergonomics around vanilla web components are too low level and often inconvenient. This is where `Supertag` plays a role.
 
-Primary focus for `Supertag` is to make **writing and shipping** web components as painless as possible while still staying true to its minimalism promise.
+Primary focus for `Supertag` is to make **authoring and shipping** web components as painless as possible while still staying true to its minimalism promise.
 
 ## Installation
 
