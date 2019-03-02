@@ -1,3 +1,19 @@
+/**
+ * vDOM representation of an element
+ */
+interface VNode<Props = {}> {
+  name: string
+  props?: Props
+  children?: Array<VNode>
+  element?: Element | null
+  key?: string | null
+  type?: number
+}
+/**
+ * Children of vDOM node
+ */
+type Children = VNode | string | number | null
+
 const DEFAULT = 0
 const RECYCLED_NODE = 1
 const TEXT_NODE = 2
@@ -283,7 +299,13 @@ const patch = (lastNode, nextNode, container) => {
   return nextNode
 }
 
-const h = (name, props, ...rest) => {
+/**
+ * Create a new vDOM node.
+ * @param name name of element or function that returns vDOM node
+ * @param props HTML props, SVG props, DOM events and keys
+ * @param rest child nodes for an element
+ */
+const h = (name: string | Function, props: any, ...rest: Array<Children | Children[]>): VNode => {
   let node,
     children: any = []
 
@@ -310,4 +332,4 @@ const h = (name, props, ...rest) => {
     : createVNode(name, props, children, null, props.key, DEFAULT)
 }
 
-export { h, patch, recycle }
+export { h, patch, VNode, Children }
