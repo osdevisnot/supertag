@@ -4629,11 +4629,6 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
-superfine@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/superfine/-/superfine-6.0.1.tgz#a7b63a910bd5995f3e199d7484b6dccc3543289f"
-  integrity sha512-dd6XBZi5kpCn/QomQqT1M9NNWgeTsWs0TB0J+Z0/ccmrtfp8fpsldLc7xSKEf2DSEeq+u4kTCf8AdurVJ7Blfg==
-
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"

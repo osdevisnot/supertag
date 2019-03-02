@@ -13,7 +13,7 @@ Supertag is a light weight library to create self contained, reusable **Web Comp
 
 ## Features
 
-- **Standards Based:** `Supertag` uses latest features of web platform such as [**Custom Elements**](https://developers.google.com/web/fundamentals/web-components/customelements) and [**Shadow DOM**](https://developers.google.com/web/fundamentals/web-components/shadowdom) and combines them with [**Superfine**](https://github.com/jorgebucaran/superfine) - a fast and efficient vDOM rendering library.
+- **Standards Based:** `Supertag` uses latest features of web platform such as [**Custom Elements**](https://developers.google.com/web/fundamentals/web-components/customelements) and [**Shadow DOM**](https://developers.google.com/web/fundamentals/web-components/shadowdom) and combines them with fast and efficient vDOM rendering based on [**Superfine**](https://github.com/jorgebucaran/superfine).
 
 - **Lightweight: < 2 kb min & gzipped** - extremely light weight solution for creating self contained, reusable [**Web Components**](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
@@ -25,13 +25,13 @@ We believe, that the emerging [**Web Components**](https://developer.mozilla.org
 
 > See [**Custom Elements Everywhere**](https://custom-elements-everywhere.com/) - a fantastic initiative by [Rob Dodson](https://github.com/robdodson) which tracks support for many popular frameworks.
 
-However, the ergonomics around vanilla web components are too low level and often inconvenient. This is where `Supertag` plays a role.
+However, the ergonomics around vanilla web components are too low level and often inconvenient, which is where `Supertag` plays a role.
 
 Primary focus for `Supertag` is to make **authoring and shipping** web components as painless as possible while still staying true to its minimalism promise.
 
 ## Installation
 
-Grab a copy from [unpkg](https://unpkg.com/supertag) CDN:
+Grab a copy from [CDN](https://unpkg.com/supertag):
 
 ```html
 <script src="https://unpkg.com/supertag"></script>
@@ -81,6 +81,8 @@ class HelloCounter extends Component {
 }
 ```
 
+Every time a `count` changes, we create a virtual DOM representation as described by `render` method. We then diff it against an existing virtual DOM representation and patch the real DOM using efficient diff and patch algorithm.
+
 ## Contributing
 
 **Found a problem ?**
@@ -89,7 +91,7 @@ class HelloCounter extends Component {
 
 **Want to hack code?**
 
-Clone this repo, and run `setup` script within repo root:
+Clone this repo, and run `setup` script in repo root:
 
 ```
 yarn run setup
