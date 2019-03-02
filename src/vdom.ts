@@ -86,7 +86,7 @@ const createElement = (node, isSvg) => {
   return (node.element = element)
 }
 
-const updateElement = (element, lastProps, nextProps, isSvg, isRecycled) => {
+const updateElement = (element, lastProps, nextProps, isSvg) => {
   for (let name in { ...lastProps, ...nextProps }) {
     if ((name === 'value' || name === 'checked' ? element[name] : lastProps[name]) !== nextProps[name]) {
       updateProperty(element, name, lastProps[name], nextProps[name], isSvg)
@@ -136,13 +136,7 @@ const patchElement = (parent, element, lastNode, nextNode, isSvg?) => {
 
     element = newElement
   } else {
-    updateElement(
-      element,
-      lastNode.props,
-      nextNode.props,
-      (isSvg = isSvg || nextNode.name === 'svg'),
-      lastNode.type === RECYCLED_NODE
-    )
+    updateElement(element, lastNode.props, nextNode.props, (isSvg = isSvg || nextNode.name === 'svg'))
 
     let savedNode,
       childNode,
