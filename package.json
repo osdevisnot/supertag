@@ -32,6 +32,6 @@
   "devDependencies": {
     "del-cli": "^1.1.0",
     "superfine": "^6.0.1",
-    "tslib-cli": "^0.0.28"
+    "tslib-cli": "^1.0.1"
   }
 }
