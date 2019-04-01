@@ -5,7 +5,7 @@
  * https://opensource.org/licenses/MIT
  */
 
-import { h, patch, VNode, Children } from './vdom'
+import { h, patch } from 'superfine'
 
 const NEEDS_RENDER = Symbol('needsRender')
 const ROOT = Symbol('root')
@@ -96,4 +96,4 @@ abstract class Component extends HTMLElement {
   }
 }
 
-export { Component, h, patch, VNode, Children }
+export { Component, h, patch }
