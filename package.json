@@ -12,17 +12,12 @@
   "module": "dist/supertag.mjs",
   "typings": "dist/supertag.d.ts",
   "scripts": {
-    "prebuild": "del dist",
-    "build": "rollup -c",
-    "postbuild": "yarn run test",
-    "prepub": "yarn run setup",
-    "pub": "yarn publish",
-    "postpub": "git push --follow-tags",
-    "presetup": "git clean -fdX",
-    "setup": "yarn",
-    "postsetup": "yarn run build",
-    "start": "rollup -wc",
-    "test": "echo 'Not Implmeneted Yet'"
+    "build": "tslib build",
+    "coverage": "tslib coverage",
+    "docs": "tslib docs",
+    "setup": "tslib setup",
+    "start": "tslib start",
+    "test": "tslib test"
   },
   "prettier": {
     "printWidth": 120,

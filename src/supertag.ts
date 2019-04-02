@@ -5,7 +5,7 @@
  * https://opensource.org/licenses/MIT
  */
 
-import { h, patch } from 'superfine'
+import { h, patch } from './web_modules/superfine.js'
 
 const NEEDS_RENDER = Symbol('needsRender')
 const ROOT = Symbol('root')
