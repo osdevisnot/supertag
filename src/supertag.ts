@@ -7,9 +7,9 @@
 
 import { h, patch } from './web_modules/superfine.js'
 
-const NEEDS_RENDER = Symbol('needsRender')
-const ROOT = Symbol('root')
-const VDOM = Symbol('vdom')
+const NEEDS_RENDER = Symbol('NR')
+const ROOT = Symbol('R')
+const VDOM = Symbol('V')
 
 /**
  * Base Class for Web Components
@@ -44,7 +44,7 @@ abstract class Component extends HTMLElement {
    * Gets called each time a Component is connected to DOM
    */
   public connectedCallback() {
-    this.__flush__()
+    this._f_()
   }
 
   /**
@@ -61,7 +61,7 @@ abstract class Component extends HTMLElement {
    * `static get observedAttributes() { return ['width']; }`
    */
   public attributeChangedCallback() {
-    this.__flush__()
+    this._f_()
   }
 
   /**
@@ -86,7 +86,7 @@ abstract class Component extends HTMLElement {
    * Once rendered, we use the existing vDOM to diff against the new vDOM
    * ... instead of rendering the whole view again.
    */
-  private async __flush__() {
+  private async _f_() {
     this[NEEDS_RENDER] = true
     await 0
     if (this[NEEDS_RENDER]) {
