@@ -5,7 +5,8 @@ let config = [
   {
     input: 'src/supertag.ts',
     output: { file: 'dist/supertag.mjs', format: 'es' },
-    tsconfigOverride: { exclude: ['node_modules', 'dist', 'public'] }
+    tsconfigOverride: { exclude: ['node_modules', 'dist', 'public'] },
+    minify: true
   },
   {
     input: 'src/supertag.ts',

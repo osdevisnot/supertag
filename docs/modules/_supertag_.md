@@ -22,21 +22,21 @@
 
 ### `<Const>` NEEDS_RENDER
 
-**● NEEDS_RENDER**: *`unique symbol`* =  Symbol('needsRender')
+**● NEEDS_RENDER**: *`unique symbol`* =  Symbol('NR')
 
 ___
 <a id="root"></a>
 
 ### `<Const>` ROOT
 
-**● ROOT**: *`unique symbol`* =  Symbol('root')
+**● ROOT**: *`unique symbol`* =  Symbol('R')
 
 ___
 <a id="vdom"></a>
 
 ### `<Const>` VDOM
 
-**● VDOM**: *`unique symbol`* =  Symbol('vdom')
+**● VDOM**: *`unique symbol`* =  Symbol('V')
 
 ___
 
