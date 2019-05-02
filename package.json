@@ -25,10 +25,9 @@
     "singleQuote": true
   },
   "dependencies": {
-    "superfine": "6.0.1"
+    "superfine": "^6.0.1"
   },
   "devDependencies": {
-    "del-cli": "^1.1.0",
-    "tslib-cli": "^2.0.4"
+    "tslib-cli": "^2.0.11"
   }
 }

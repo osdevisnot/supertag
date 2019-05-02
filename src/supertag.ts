@@ -5,7 +5,9 @@
  * https://opensource.org/licenses/MIT
  */
 
-import { h, patch } from './web_modules/superfine.js'
+import { h, patch } from 'superfine'
+import { store } from './store'
+import { match } from './router'
 
 const NEEDS_RENDER = Symbol('NR')
 const ROOT = Symbol('R')
@@ -18,11 +20,13 @@ abstract class Component extends HTMLElement {
   /**
    * Render method should return the vdom representation of how the view should look like
    */
-  public abstract render(): any
+  public abstract render(state: any, dispatch: any): any
+
+  private updated = () => this._f_()
 
   constructor() {
     super()
-    this[ROOT] = this.createRoot()
+    this[ROOT] = this.root()
     // See: https://developers.google.com/web/fundamentals/web-components/best-practices#lazy-properties
     Object.getOwnPropertyNames(this).forEach(prop => {
       const val = this[prop]
@@ -36,7 +40,7 @@ abstract class Component extends HTMLElement {
    * Override this method to customize the behavior
    * For example, `return this` to avoid using Shadow Dom
    */
-  public createRoot() {
+  public root() {
     return this.attachShadow({ mode: 'open' })
   }
 
@@ -44,6 +48,7 @@ abstract class Component extends HTMLElement {
    * Gets called each time a Component is connected to DOM
    */
   public connectedCallback() {
+    store.on(this.updated)
     this._f_()
   }
 
@@ -51,6 +56,7 @@ abstract class Component extends HTMLElement {
    * Gets called each time a Component is removed from DOM
    */
   public disconnectedCallback() {
+    store.off(this.updated)
     this[NEEDS_RENDER] = false
   }
 
@@ -91,9 +97,9 @@ abstract class Component extends HTMLElement {
     await 0
     if (this[NEEDS_RENDER]) {
       this[NEEDS_RENDER] = false
-      this[VDOM] = patch(this[VDOM], this.render(), this[ROOT])
+      this[VDOM] = patch(this[VDOM], this.render(store.state, store.dispatch), this[ROOT])
     }
   }
 }
 
-export { Component, h, patch }
+export { Component, h, store, match }
