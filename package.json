@@ -1,6 +1,6 @@
 {
 	"name": "supertag",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"description": "create self contained, reusable web components",
 	"repository": "osdevisnot/supertag",
 	"license": "MIT",
