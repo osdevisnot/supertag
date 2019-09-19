@@ -1,0 +1,38 @@
+{
+	"name": "supertag",
+	"version": "0.0.8",
+	"description": "create self contained, reusable web components",
+	"repository": "osdevisnot/supertag",
+	"license": "MIT",
+	"author": "osdevisnot <osdevisnot@gmail.com>",
+	"files": [
+		"dist"
+	],
+	"main": "dist/supertag.cjs.js",
+	"module": "dist/supertag.esm.js",
+	"source": "src/supertag.tsx",
+	"browser": "dist/supertag.js",
+	"types": "dist/types/supertag.d.ts",
+	"scripts": {
+		"build": "tslib build",
+		"coverage": "tslib coverage",
+		"coveralls": "tslib coveralls",
+		"format": "tslib format",
+		"lint": "tslib lint",
+		"prepare": "tslib build",
+		"pub": "tslib pub",
+		"setup": "tslib setup",
+		"start": "tslib start",
+		"test": "tslib test",
+		"watch": "tslib watch"
+	},
+	"prettier": "tslib-cli",
+	"dependencies": {
+		"superfine": "^6"
+	},
+	"devDependencies": {
+		"@types/jest": "^24.0.9",
+		"tslib-cli": "^5.0.8"
+	},
+	"peerDependencies": {}
+}
