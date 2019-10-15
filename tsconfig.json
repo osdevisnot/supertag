@@ -11,7 +11,7 @@
 		"module": "esnext",
 		"moduleResolution": "node",
 		"outDir": "dist",
-		"strict": false, // enable the strict mode :)
+		"strict": false,
 		"target": "esnext",
 		"removeComments": true,
 		"baseUrl": ".",

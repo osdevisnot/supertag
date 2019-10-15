@@ -13,6 +13,7 @@
 	"source": "src/supertag.tsx",
 	"browser": "dist/supertag.js",
 	"types": "dist/types/supertag.d.ts",
+	"example": "public/index.tsx",
 	"scripts": {
 		"build": "tslib build",
 		"coverage": "tslib coverage",
@@ -31,8 +32,8 @@
 		"superfine": "^6"
 	},
 	"devDependencies": {
-		"@types/jest": "^24.0.9",
-		"tslib-cli": "^5.0.8"
+		"@types/jest": "24.0.19",
+		"tslib-cli": "5.2.3"
 	},
 	"peerDependencies": {}
 }
